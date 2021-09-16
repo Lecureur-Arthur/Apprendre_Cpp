@@ -12,7 +12,6 @@ class IPv4
     void CalculerMasque(unsigned char _cidr);
     int NbBitA1(unsigned char val);
   public:
-
     IPv4(const unsigned char * _adresse, const unsigned char _cidr);
     IPv4(const unsigned char * _adresse, const unsigned char * _masque);
     ~IPv4();

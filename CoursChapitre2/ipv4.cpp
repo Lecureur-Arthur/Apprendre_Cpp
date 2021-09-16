@@ -66,3 +66,36 @@ void IPv4::ObtenirAdresseDiffusion(unsigned char *_diffusion)
     for(int indice = 0 ; indice < 4 ; indice++)
         _diffusion[indice] = adresseDuReseau[indice] | ~masque[indice] ;
 }
+
+void IPv4::ObtenirPremierAdresse(unsigned char *_reseau)
+{
+    for(int indice=0;indice<4;indice++)
+        _reseau[indice] = adresse[indice] & masque[indice];
+    _reseau[3]++;
+}
+
+void IPv4::ObtenirDernièreAdresse(unsigned char *_reseau)
+{
+    ObtenirAdresseReseau(_reseau);
+    for(int indice=0;indice<4;indice++)
+        _reseau[indice] = adresse[indice] & masque[indice];
+    _reseau[3]--;
+}
+
+int IPv4::NbBitA1(unsigned char val)
+{
+    int n = 0;
+    do{
+        n+= val & 1;
+        val >>=1;
+    }while (val>0);
+    return n;
+}
+
+unsigned int IPv4::NombreDeMachine()
+{
+    unsigned int nb = 0;
+    for (int i = 0; i<4; i++)
+        nb+= NbBitA1(masque[i]);
+    return exp2(32-nb) -2;
+}
