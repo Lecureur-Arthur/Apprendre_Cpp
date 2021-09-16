@@ -8,5 +8,15 @@ BarreRectangle::BarreRectangle(const string _reference, const string _nom, const
     longeurCote(_longeurCote),
     largeurCote(_largeurCote)
 {
+    cout << "Masse Barre Rectangle : " << CalculerMasse() << endl;
+}
 
+float BarreRectangle::CalculerSection()
+{
+    return longeurCote * largeurCote;
+}
+
+float BarreRectangle::CalculerMasse()
+{
+    return longeur * CalculerSection() * densite;
 }

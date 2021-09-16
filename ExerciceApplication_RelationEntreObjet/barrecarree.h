@@ -6,10 +6,12 @@
 
 class BarreCarree : public Barre
 {
+private:
+    float longueurCote;
 public:
     BarreCarree(const string _reference, const string _nom, const float _longeur, const float _densite, const float _longeurCote);
-protected:
-    float longeurCote;
+    float CalculerSection();
+    float CalculerMasse();
 };
 
 #endif // BARRECARREE_H
