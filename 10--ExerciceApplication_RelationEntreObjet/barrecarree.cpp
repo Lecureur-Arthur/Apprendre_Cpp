@@ -18,13 +18,11 @@ float BarreCarree::CalculerSection()
 
 float BarreCarree::CalculerMasse()
 {
-    return longeur * CalculerSection() * densite;
+    return longueur * CalculerSection() * densite;
 }
 
 void BarreCarree::AfficherCaracteristiques()
 {
-    cout << "La référence de la barre est : " << reference << endl;
-    cout << "Le nom de la barre est       : " << nom << endl;
-    cout << "La longeur de la barre est   : " << longeur << endl;
-    cout << "La densite de la barre est   : " << densite << endl;
+    Barre::AfficherCaracteristiques();
+    cout << "Coté de la barre carree est   : " << longueurCote << endl;
 }

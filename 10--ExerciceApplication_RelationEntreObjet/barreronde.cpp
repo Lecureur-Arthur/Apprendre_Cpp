@@ -7,7 +7,7 @@ BarreRonde::BarreRonde(const string _reference, const string _nom, const float _
 {
     cout << "Les caraterisitique de la barre ronde : " << endl;
     AfficherCaracteristiques();
-    cout << "Masse Barre &éRonde : " << CalculerMasse() << endl;
+    cout << "Masse Barre Ronde : " << CalculerMasse() << endl;
 }
 
 float BarreRonde::CalculerSection()
@@ -17,13 +17,11 @@ float BarreRonde::CalculerSection()
 
 float BarreRonde::CalculerMasse()
 {
-    return longeur * CalculerSection() * densite;
+    return longueur * CalculerSection() * densite;
 }
 
 void BarreRonde::AfficherCaracteristiques()
 {
-    cout << "La référence de la barre est : " << reference << endl;
-    cout << "Le nom de la barre est       : " << nom << endl;
-    cout << "La longeur de la barre est   : " << longeur << endl;
-    cout << "La densite de la barre est   : " << densite << endl;
+    Barre::AfficherCaracteristiques();
+    cout << "Diametre de la barre ronde est   : " << diametre << endl;
 }

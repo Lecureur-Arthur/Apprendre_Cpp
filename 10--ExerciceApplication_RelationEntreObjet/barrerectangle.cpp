@@ -20,13 +20,12 @@ float BarreRectangle::CalculerSection()
 
 float BarreRectangle::CalculerMasse()
 {
-    return longeur * CalculerSection() * densite;
+    return longueur * CalculerSection() * densite;
 }
 
 void BarreRectangle::AfficherCaracteristiques()
 {
-    cout << "La référence de la barre est : " << reference << endl;
-    cout << "Le nom de la barre est       : " << nom << endl;
-    cout << "La longeur de la barre est   : " << longeur << endl;
-    cout << "La densite de la barre est   : " << densite << endl;
+    Barre::AfficherCaracteristiques();
+    cout << "Longueur de la barre rectangle est   : " << longeurCote << endl;
+    cout << "Largeur de la barre rectangle est   : " << largeurCote << endl;
 }

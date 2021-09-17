@@ -15,7 +15,7 @@ public:
 protected:
     string reference;
     string nom;
-    float longeur;
+    float longueur;
     float densite;
 };
 
