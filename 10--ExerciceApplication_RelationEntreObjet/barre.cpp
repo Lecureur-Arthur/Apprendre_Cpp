@@ -11,12 +11,11 @@ Barre::Barre(const string _reference, const string _nom, const float _longeur, c
     densite(_densite)
 {
     cout << "Constructeur de la Barre" << endl;
-    AfficherCaracteristique();
 }
 
-void Barre::AfficherCaracteristique()
+void Barre::AfficherCaracteristiques()
 {
-    cout << "La reference de la barre est : " << reference << endl;
+    cout << "La référence de la barre est : " << reference << endl;
     cout << "Le nom de la barre est       : " << nom << endl;
     cout << "La longeur de la barre est   : " << longeur << endl;
     cout << "La densite de la barre est   : " << densite << endl;

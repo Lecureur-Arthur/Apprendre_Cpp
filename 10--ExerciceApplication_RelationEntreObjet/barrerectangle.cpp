@@ -8,6 +8,8 @@ BarreRectangle::BarreRectangle(const string _reference, const string _nom, const
     longeurCote(_longeurCote),
     largeurCote(_largeurCote)
 {
+    cout << "Les caraterisitique de la barre rectangle : " << endl;
+    AfficherCaracteristiques();
     cout << "Masse Barre Rectangle : " << CalculerMasse() << endl;
 }
 
@@ -19,4 +21,12 @@ float BarreRectangle::CalculerSection()
 float BarreRectangle::CalculerMasse()
 {
     return longeur * CalculerSection() * densite;
+}
+
+void BarreRectangle::AfficherCaracteristiques()
+{
+    cout << "La référence de la barre est : " << reference << endl;
+    cout << "Le nom de la barre est       : " << nom << endl;
+    cout << "La longeur de la barre est   : " << longeur << endl;
+    cout << "La densite de la barre est   : " << densite << endl;
 }

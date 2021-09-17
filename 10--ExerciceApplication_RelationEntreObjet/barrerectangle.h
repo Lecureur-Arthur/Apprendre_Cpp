@@ -14,6 +14,7 @@ public:
                    const float _densite, const float _longeurCote, const float _largeurCote);
     float CalculerSection();
     float CalculerMasse();
+    void AfficherCaracteristiques();
 };
 
 #endif // BARRERECTANGLE_H
