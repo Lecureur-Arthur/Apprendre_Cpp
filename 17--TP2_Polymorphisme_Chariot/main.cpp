@@ -1,19 +1,33 @@
 #include <iostream>
-#include "trajectoire.h"
-#include "element.h"
-#include "segment.h"
-
+#include"element.h"
+#include"trajectoire.h"
+#include"segment.h"
 using namespace std;
 
 int main()
 {
-    Trajectoire traj1(3);
-    traj1.Afficher();
+    Trajectoire sauccise(10);
+    Element *element,*elementbis;
+    element = new Segment(10,10,3);
+    elementbis = new Segment(10,10);
 
-    Segment segment1(20,40,3);
-    segment1.Afficher();
+    //sauccise.Afficher();
 
-    Segment segment2(10,20);
-    segment2.Afficher();
 
+
+    sauccise.Ajouter(element);
+    sauccise.Ajouter(elementbis);
+
+    sauccise.Afficher();
+
+
+    // element->Afficher();
+    //elementbis->Afficher();
+
+
+
+
+
+
+    return 0;
 }

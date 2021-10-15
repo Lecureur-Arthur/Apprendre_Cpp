@@ -1,12 +1,25 @@
 #include "element.h"
 
+/*
+Element::Element()
+{
+    numero=0;
+    vitesse=1;
 
-Element::Element(const int _vitesse):vitesse(_vitesse)
+}
+*/
+
+Element::Element(int _vitesse):vitesse(_vitesse)
+{
+numero=0;
+}
+
+Element::~Element()
 {
 
 }
 
-Element::~Element()
+void Element::Afficher()
 {
 
 }
@@ -20,7 +33,6 @@ void Element::setNumero(int value)
 {
     numero = value;
 }
-
 int Element::getVitesse() const
 {
     return vitesse;
@@ -29,9 +41,4 @@ int Element::getVitesse() const
 void Element::setVitesse(int value)
 {
     vitesse = value;
-}
-
-void Element::Afficher()
-{
-
 }

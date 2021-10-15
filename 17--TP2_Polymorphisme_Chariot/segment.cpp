@@ -1,9 +1,7 @@
 #include "segment.h"
 #include "element.h"
 
-
-
-Segment::Segment(const double _longueur,const double _angle, const int _vitesse):
+Segment::Segment(const double _longueur, const double _angle,int _vitesse):
     Element(_vitesse),
     longueur(_longueur),
     angle(_angle)
@@ -13,5 +11,6 @@ Segment::Segment(const double _longueur,const double _angle, const int _vitesse)
 
 void Segment::Afficher()
 {
-    cout<<"SEGMENT L = "<<longueur<<setfill(' ')<<setw(10)<<"A = "<<angle<<setfill(' ')<<setw(10)<<"V = "<<getVitesse()<<endl;
+  cout<<"("<<numero<<")"<<"SEGMENT L = "<<longueur<<setfill(' ')<<setw(10)<<"A = "<<angle<<setfill(' ')<<setw(10)<<"V = "<<vitesse<<endl;
+
 }
